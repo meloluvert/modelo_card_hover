@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}   
+:root{
+    --time-trasnsition: 0.5s;
+}
+body{background-color: black;}
+.component{
+    width: 70%;
+}
+.component .title{
+    background: yellow;
+}
+.component .card{
+    background: red;
+    height: 200px;
+}
+.component .text{
+    background-color: blue;
+    height: 20px;
+    text-align: justify;
+    position: relative;
+    bottom:-180px;
+    transition:height var(--time-trasnsition),bottom var(--time-trasnsition);
+    overflow-y: scroll;
+    overflow: hidden;
+}
+.component .text p{
+    display: none;
+    color: blue;
+    transition: color 89s;
+}
+.component:hover .text{
+    height: 100px;
+    bottom: -100px;
+
+}
+.component:hover .text p{
+    display: block;
+    color: white;
+}
